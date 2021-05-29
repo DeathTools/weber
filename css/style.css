@@ -1014,16 +1014,69 @@ body.ie ._ibg img {
           flex: 0 1 50%;
 }
 
+.logo-mobile {
+  z-index: 15;
+}
+
+.menu {
+  -webkit-transition: left 0.4s ease 0s, opacity 0.4s ease 0s;
+  -o-transition: left 0.4s ease 0s, opacity 0.4s ease 0s;
+  transition: left 0.4s ease 0s, opacity 0.4s ease 0s;
+}
+
 .menu__body {
+  display: none;
   position: fixed;
-  width: 100%;
   height: 100%;
   top: 0;
   left: 0;
-  overflow: auto;
   padding: 70px 20px 0px 20px;
+  background-color: #000;
   display: none;
-  z-index: 1001;
+  z-index: 10;
+  bottom: 0;
+  width: 300px;
+  max-width: 100%;
+  overflow: hidden;
+  overflow-y: auto;
+  -webkit-box-shadow: -5px -5px 5px -5px rgba(255, 0, 0, 0.6) inset;
+  box-shadow: -5px -5px 5px -5px rgba(255, 0, 0, 0.6) inset;
+}
+
+.menu__body._active {
+  display: block;
+}
+
+.menu__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: left;
+}
+
+.menu__list a {
+  color: white;
+}
+
+.menu__link {
+  padding: 19px 20px 20px 19px;
+  display: block;
+  position: relative;
+  border-bottom: 1px solid #c61310;
+}
+
+.menu__search {
+  display: block;
+}
+
+.menu__search img {
+  height: 70px;
+  width: auto;
+  margin-left: -20px;
 }
 
 .icon-menu {
@@ -1260,7 +1313,7 @@ body.ie ._ibg img {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  z-index: 1000;
+  z-index: 5;
   --dm-bg: black;
   --dm-color: #333;
 }
@@ -2238,7 +2291,7 @@ body.ie ._ibg img {
     width: 30px;
     height: 18px;
     cursor: pointer;
-    z-index: 999999;
+    z-index: 11;
   }
 
   .icon-menu span {
@@ -2300,6 +2353,10 @@ body.ie ._ibg img {
 
   .actions-header__search {
     padding-right: 10px;
+  }
+
+  .hide-on-mobile {
+    display: none;
   }
 }
 
