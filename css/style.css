@@ -2887,12 +2887,30 @@ body.ie ._ibg img {
     display: none;
   }
 
+  .slider {
+    margin: 20px 35px;
+  }
+
+  .owl-dots {
+    display: none;
+  }
+
   .main-nav {
     display: none;
   }
 
   .features {
     display: none;
+  }
+
+  .accordion .link > a:hover {
+    background-color: none;
+    color: none;
+  }
+
+  .accordion .submenu > li a:hover {
+    background: none;
+    color: none;
   }
 }
 
