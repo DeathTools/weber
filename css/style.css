@@ -2283,6 +2283,86 @@ body.ie ._ibg img {
   color: #e9e9e9;
   font-size: 14px;
   letter-spacing: 0.81px;
+  line-height: 20px;
+}
+
+.mobile-footer__content {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.mobile-footer__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  border-top: 1px solid #1d1d1e;
+  padding-top: 20px;
+}
+
+.mobile-footer__row ul {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 2em;
+}
+
+.mobile-footer__row ul li a {
+  color: #fffefe;
+  font-family: "Museo100";
+  font-size: 15px;
+  font-weight: 400;
+  letter-spacing: 0.56px;
+}
+
+.mobile-footer__column {
+  margin-top: 30px;
+  width: 100%;
+  padding-bottom: 30px;
+}
+
+.mobile-footer__column ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.mobile-footer__column ul li {
+  color: #fffefe;
+  font-family: "Museo100";
+  font-size: 15px;
+  font-weight: 400;
+  letter-spacing: 0.56px;
 }
 
 .page {
@@ -2299,6 +2379,10 @@ body.ie ._ibg img {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+.mobile-search {
+  margin-top: 20px;
 }
 
 .slider {
@@ -2711,6 +2795,18 @@ body.ie ._ibg img {
     background-color: rgba(0, 0, 0, 0.5);
   }
 
+  .mobile-footer {
+    display: none;
+  }
+
+  .mobile-footer__content {
+    display: none;
+  }
+
+  .mobile-search {
+    display: none;
+  }
+
   .products-mobile {
     display: none;
   }
@@ -2742,6 +2838,10 @@ body.ie ._ibg img {
 
   .info-header__tel {
     font-size: 14px;
+  }
+
+  .footer-li__first li a {
+    display: none;
   }
 }
 
@@ -2881,6 +2981,72 @@ body.ie ._ibg img {
 
   .actions-header__search {
     padding-right: 10px;
+  }
+
+  .footer li:first-child a {
+    color: #fffefe;
+    font-family: "Museo100";
+    font-size: 15px;
+    font-weight: 400;
+    letter-spacing: 0.56px;
+  }
+
+  .footer__content {
+    padding-top: 30px;
+  }
+
+  .company-footer {
+    display: none;
+  }
+
+  .grill-footer {
+    display: none;
+  }
+
+  .accessories-footer {
+    display: none;
+  }
+
+  .logo-footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+  }
+
+  .logo-footer__logo {
+    padding-bottom: 10px;
+  }
+
+  .logo-footer__logo span {
+    display: none;
+  }
+
+  .logo-footer__text {
+    display: none;
+  }
+
+  .logo-footer__form {
+    display: none;
+  }
+
+  .input-footer {
+    display: none;
+  }
+
+  .footer-bottom__copy {
+    margin-top: 0;
+    text-align: center;
   }
 
   .hide-on-mobile {
