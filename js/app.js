@@ -6,12 +6,13 @@ $(document).ready(function () {
 
     $('.owl-carousel').owlCarousel({
       margin: 0,
+	  
       loop: true,
+      autoHeight: true,
+      smartSpeed:1000,
       nav: true,
-      pagination: true,
-      navText: ["", ""],
       items: 1,
-
+	
       autoplay: true,
     })
 
@@ -181,6 +182,20 @@ DynamicAdapt.prototype.arraySort = function (arr) {
 
 const da = new DynamicAdapt("max");
 da.init();
+
+
+
+
+$(function() {
+	$('.accordion li').click(function(){
+	  $(this).toggleClass(' active ');
+	  $(this).siblings().removeClass(' active '); 
+	  $('.submenu').stop().slideUp();
+	  $('.active .submenu').stop().slideDown();
+	  return false;
+	});
+  });
+  
 var ua = window.navigator.userAgent;
 var msie = ua.indexOf("MSIE ");
 var isMobile = { Android: function () { return navigator.userAgent.match(/Android/i); }, BlackBerry: function () { return navigator.userAgent.match(/BlackBerry/i); }, iOS: function () { return navigator.userAgent.match(/iPhone|iPad|iPod/i); }, Opera: function () { return navigator.userAgent.match(/Opera Mini/i); }, Windows: function () { return navigator.userAgent.match(/IEMobile/i); }, any: function () { return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows()); } };
@@ -1590,7 +1605,6 @@ function scroll_animate(event) {
 	//If native scroll
 	//disableScroll();
 }
-
 
 /**
  * Owl Carousel v2.3.4
