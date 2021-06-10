@@ -34,11 +34,6 @@
   font-style: normal;
 }
 
-a,
-span {
-  color: #717171;
-}
-
 .red {
   color: red;
 }
@@ -1005,6 +1000,11 @@ body.ie ._ibg img {
   background-color: black;
 }
 
+.top-header a,
+.top-header span {
+  color: #717171;
+}
+
 .top-header__content {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1861,18 +1861,11 @@ body.ie ._ibg img {
 :root {
   font-size: 16px;
   font-family: "Open Sans";
-  --text-primary: #b6b6b6;
-  --text-secondary: #ececec;
+  --text-primary: white;
+  --text-secondary: red;
   --bg-primary: #23232e;
   --bg-secondary: #141418;
   --transition-speed: 600ms;
-}
-
-body {
-  color: black;
-  background-color: white;
-  margin: 0;
-  padding: 0;
 }
 
 body::-webkit-scrollbar {
@@ -1928,7 +1921,6 @@ main {
 }
 
 .nav-link {
-  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1945,17 +1937,11 @@ main {
   transition: var(--transition-speed);
 }
 
-.nav-link img {
-  position: absolute;
-  width: 100%;
-  height: auto;
-}
-
 .nav-link:hover {
   -webkit-filter: grayscale(0%) opacity(1);
           filter: grayscale(0%) opacity(1);
-  background: var(--bg-secondary);
-  color: var(--text-secondary);
+  background: var(--bg-secondary) !important;
+  color: var(--text-secondary) !important;
 }
 
 .link-text {
@@ -1963,7 +1949,6 @@ main {
   margin-left: 1rem;
 }
 
-.nav-link img,
 .nav-link svg {
   width: 2rem;
   min-width: 2rem;
@@ -1971,11 +1956,11 @@ main {
 }
 
 .fa-primary {
-  color: #ff7eee;
+  color: #fff;
 }
 
 .fa-secondary {
-  color: #df49a6;
+  color: #ff4444;
 }
 
 .fa-primary,
@@ -1990,8 +1975,8 @@ main {
   text-transform: uppercase;
   margin-bottom: 1rem;
   text-align: center;
-  color: var(--text-secondary);
-  background: var(--bg-secondary);
+  color: var(--text-secondary) !important;
+  background: var(--bg-secondary) !important;
   font-size: 1.2rem;
   letter-spacing: 0.3ch;
   width: 100%;
@@ -2026,7 +2011,7 @@ main {
 /* Large screens */
 
 .dark {
-  --text-primary: #b6b6b6;
+  --text-primary: red !;
   --text-secondary: #ececec;
   --bg-primary: #23232e;
   --bg-secondary: #141418;
@@ -3125,12 +3110,7 @@ main {
   position: absolute;
 }
 
-.column-blog__main-text a {
-  z-index: 1000000;
-}
-
 .column-blog__main-text span {
-  z-index: 1000000;
   color: #ffffff;
   font-family: "Museo300";
   font-size: 15px;
