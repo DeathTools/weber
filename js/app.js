@@ -196,6 +196,32 @@ $(function() {
 	});
   });
   
+
+
+
+  const themeMap = {
+	dark: "light",
+	light: "solar",
+	solar: "dark"
+  };
+  
+  const theme = localStorage.getItem('theme')
+	|| (tmp = Object.keys(themeMap)[0],
+		localStorage.setItem('theme', tmp),
+		tmp);
+  const bodyClass = document.body.classList;
+  bodyClass.add(theme);
+  
+  function toggleTheme() {
+	const current = localStorage.getItem('theme');
+	const next = themeMap[current];
+  
+	bodyClass.replace(current, next);
+	localStorage.setItem('theme', next);
+  }
+  
+  document.getElementById('themeButton').onclick = toggleTheme;
+  
 var ua = window.navigator.userAgent;
 var msie = ua.indexOf("MSIE ");
 var isMobile = { Android: function () { return navigator.userAgent.match(/Android/i); }, BlackBerry: function () { return navigator.userAgent.match(/BlackBerry/i); }, iOS: function () { return navigator.userAgent.match(/iPhone|iPad|iPod/i); }, Opera: function () { return navigator.userAgent.match(/Opera Mini/i); }, Windows: function () { return navigator.userAgent.match(/IEMobile/i); }, any: function () { return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows()); } };
